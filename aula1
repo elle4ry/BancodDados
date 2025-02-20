@@ -1,0 +1,23 @@
+CREATE TABLE aluno(
+	id_aluno INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	primeiro_nome VARCHAR,
+	sobrenome VARCHAR,
+	data_nascimento DATE
+);
+
+CREATE TABLE tipo_disciplina(
+	id_tipo_disciplina INT PRIMATY KEY GENERATED ALWAYS AS IDENTITY,
+	nome VARCHAR,
+);
+
+CREATE TABLE disciplina(
+	id_disciplina INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	nome VARCHAR,
+	id_tipo_disciplina INT REFERENCES tipo disciplina(id_disciplina)
+);
+
+CREATE TABLE aluno_disciplina(
+	id_aluno_disciplina INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	id_aluno INT FOREIGN KEY,
+	id_disciplina INT FOREIGN KEY
+);
