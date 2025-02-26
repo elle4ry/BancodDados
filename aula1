@@ -21,3 +21,33 @@ CREATE TABLE aluno_disciplina(
 	id_aluno INT FOREIGN KEY,
 	id_disciplina INT FOREIGN KEY
 );
+
+/*alua dois===============================================*/
+
+INSERT INTO aluno(primeiro_nome, sobrenome, data_nascimento)
+	VALUES ('Guilherme', 'Riguiti de Oliveira', '03-04-19970'),
+		('Leonardo', 'Nascimento Souza Cruz', '30-05-2002'),
+		('Pedro Henrique', 'Carlos de Souza Machado', '12-03-1999'),
+		('Marcos', 'Tarcisio Buettel', '04-04-1991')
+
+INSERT INTO aluno(primeiro_nome, sobrenome, data_nascimento)
+	VALUES ('Beatriz', 'Lopes Quevedo', '27-12-2005')
+
+INSERT INTO aluno (primeiro_nome, sobrenome,  data_nascimento)
+VALUES('Lucas', 'dos Santos Narciso', '31-07-2001'),
+ ('Luiz Octavio', 'Barros Rodrigues', '12-12-1996'),
+ ('João Marcus', 'da Silva Sousa', '17-09-1999'),
+ ('Flávia', 'Aparecida Ferrari Toscano', '03-10-2001')
+
+insert into tipo_disciplina(nome)
+values('Formação Básica'),
+('Práticas Profissionais'),
+('Formação Complementar'),
+('Projeto Aplicado à Comunidade'),
+('Optativa')
+
+INSERT INTO disciplina (nome, tipo)
+VALUES('Laboratório de Banco de Dados', 'Práticas Profissionais'),
+('Optativa I', 'Optativa'),
+('Governança em Tecnologia da Informação', 'Formação Complementar'),
+('Linguagem de Programação I', 'Práticas Profissionais')
